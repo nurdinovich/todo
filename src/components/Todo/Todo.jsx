@@ -16,7 +16,7 @@ const Todo = () => {
         });
     }, [dispatch]);
 
-    const handleAddTodo = () => {
+    const AddTodo = () => {
         const newTodo = {
             id: todos.length + 1,
             title: task,
@@ -37,7 +37,7 @@ const Todo = () => {
                 onChange={(e) => setTask(e.target.value)}
                 placeholder="Add new task"
             />
-            <button onClick={handleAddTodo}>Add</button>
+            <button onClick={AddTodo}>Add</button>
             <ul>
                 {todos.map((todo) => (
                     <TodoItem key={todo.id} todo={todo} />
